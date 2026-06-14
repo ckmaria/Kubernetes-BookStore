@@ -1,4 +1,4 @@
-et pour // ===================== DONNÉES DES LIVRES (statique / vitrine) =====================
+et pour 
 const books = [
   {
     title: "L'Étranger",
@@ -90,7 +90,7 @@ const books = [
   }
 ];
 
-// ===================== GÉNÉRATION DES CARTES =====================
+
 function renderBooks() {
   const grid = document.getElementById('books-grid');
   if (!grid) return;
@@ -127,7 +127,7 @@ function renderBooks() {
   `).join('');
 }
 
-// ===================== MENU MOBILE =====================
+
 function setupMobileMenu() {
   const hamburger = document.getElementById('hamburger');
   const navLinks = document.getElementById('nav-links');
@@ -141,7 +141,7 @@ function setupMobileMenu() {
     icon.classList.toggle('fa-xmark');
   });
 
-  // Ferme le menu après clic sur un lien (mobile)
+  
   navLinks.querySelectorAll('a').forEach(link => {
     link.addEventListener('click', () => {
       navLinks.classList.remove('open');
@@ -152,7 +152,6 @@ function setupMobileMenu() {
   });
 }
 
-// ===================== NAVBAR ACTIVE LINK ON SCROLL =====================
 function setupActiveNav() {
   const sections = document.querySelectorAll('section[id], header[id]');
   const navItems = document.querySelectorAll('.nav-links a');
@@ -175,7 +174,6 @@ function setupActiveNav() {
   });
 }
 
-// ===================== TOAST =====================
 function showToast(message, icon = 'fa-circle-check') {
   const container = document.getElementById('toast-container');
   if (!container) return;
@@ -195,7 +193,6 @@ function showToast(message, icon = 'fa-circle-check') {
   }, 2500);
 }
 
-// ===================== PANIER =====================
 const cart = {}; // { bookTitle: quantity }
 
 function updateCartBadge() {
