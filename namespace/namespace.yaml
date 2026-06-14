@@ -1,0 +1,8 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: bookstore
+  labels:
+    app.kubernetes.io/name: bookstore
+    env: tp
+    team: formation

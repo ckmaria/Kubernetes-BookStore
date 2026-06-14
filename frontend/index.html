@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BookStore - Librairie en ligne</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+<body>
+
+  <!-- NAVBAR -->
+  <header class="navbar">
+    <div class="container navbar-inner">
+      <div class="logo">
+        <i class="fa-solid fa-book-open"></i>
+        <span>Book<span class="accent">Store</span></span>
+      </div>
+
+      <nav class="nav-links" id="nav-links">
+        <a href="#home" class="active">Accueil</a>
+        <a href="#books">Livres</a>
+        <a href="#categories">Catégories</a>
+        <a href="#about">À propos</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <div class="navbar-actions">
+        <button class="icon-btn" aria-label="Recherche"><i class="fa-solid fa-magnifying-glass"></i></button>
+        <button class="icon-btn cart-btn" aria-label="Panier">
+          <i class="fa-solid fa-cart-shopping"></i>
+          <span class="cart-badge">0</span>
+        </button>
+        <button class="hamburger" id="hamburger" aria-label="Menu">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero" id="home">
+    <div class="container hero-inner">
+      <div class="hero-text">
+        <span class="badge">📚 Nouvelle collection 2026</span>
+        <h1>Découvrez votre prochaine <span class="accent">lecture favorite</span></h1>
+        <p>
+          Des milliers de livres à portée de clic. Romans, BD, essais, livres
+          scolaires — explorez notre catalogue et trouvez le livre qui vous
+          inspirera aujourd'hui.
+        </p>
+        <div class="hero-actions">
+          <a href="#books" class="btn btn-primary">
+            Explorer le catalogue <i class="fa-solid fa-arrow-right"></i>
+          </a>
+          <a href="#about" class="btn btn-outline">En savoir plus</a>
+        </div>
+
+        <div class="hero-stats">
+          <div class="stat">
+            <strong>12K+</strong>
+            <span>Livres disponibles</span>
+          </div>
+          <div class="stat">
+            <strong>8K+</strong>
+            <span>Clients satisfaits</span>
+          </div>
+          <div class="stat">
+            <strong>4.9/5</strong>
+            <span>Note moyenne</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-image">
+        <div class="hero-card hero-card-1">
+          <i class="fa-solid fa-book"></i>
+          <div>
+            <strong>Livraison rapide</strong>
+            <span>24-48h partout</span>
+          </div>
+        </div>
+        <div class="hero-illustration">
+          <i class="fa-solid fa-book-open-reader"></i>
+        </div>
+        <div class="hero-card hero-card-2">
+          <i class="fa-solid fa-star"></i>
+          <div>
+            <strong>4.9 / 5</strong>
+            <span>+2300 avis</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CATEGORIES -->
+  <section class="categories" id="categories">
+    <div class="container">
+      <div class="section-header">
+        <h2>Parcourir par catégorie</h2>
+        <p>Trouvez rapidement le genre qui vous correspond</p>
+      </div>
+      <div class="categories-grid">
+        <div class="category-card">
+          <i class="fa-solid fa-feather"></i>
+          <h3>Romans</h3>
+          <span>1 240 livres</span>
+        </div>
+        <div class="category-card">
+          <i class="fa-solid fa-flask"></i>
+          <h3>Sciences</h3>
+          <span>540 livres</span>
+        </div>
+        <div class="category-card">
+          <i class="fa-solid fa-landmark"></i>
+          <h3>Histoire</h3>
+          <span>780 livres</span>
+        </div>
+        <div class="category-card">
+          <i class="fa-solid fa-children"></i>
+          <h3>Jeunesse</h3>
+          <span>960 livres</span>
+        </div>
+        <div class="category-card">
+          <i class="fa-solid fa-laptop-code"></i>
+          <h3>Informatique</h3>
+          <span>410 livres</span>
+        </div>
+        <div class="category-card">
+          <i class="fa-solid fa-paintbrush"></i>
+          <h3>Art &amp; Design</h3>
+          <span>320 livres</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BOOKS -->
+  <section class="books" id="books">
+    <div class="container">
+      <div class="section-header">
+        <h2>Nos meilleures ventes</h2>
+        <p>Sélection de livres populaires recommandés par notre équipe</p>
+      </div>
+
+      <div class="books-grid" id="books-grid">
+        <!-- Les cartes sont générées par script.js -->
+      </div>
+    </div>
+  </section>
+
+  <!-- NEWSLETTER -->
+  <section class="newsletter">
+    <div class="container newsletter-inner">
+      <div>
+        <h2>Restez informé</h2>
+        <p>Recevez nos nouveautés et promotions directement par email.</p>
+      </div>
+      <form class="newsletter-form" onsubmit="return false;">
+        <input type="email" placeholder="Votre adresse email" required>
+        <button type="submit" class="btn btn-primary">S'abonner</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="about" id="about">
+    <div class="container about-inner">
+      <div class="about-image">
+        <i class="fa-solid fa-store"></i>
+      </div>
+      <div class="about-text">
+        <h2>À propos de BookStore</h2>
+        <p>
+          BookStore est votre librairie en ligne de confiance. Notre mission
+          est de rendre la lecture accessible à tous grâce à un large
+          catalogue, des prix justes et un service client réactif.
+        </p>
+        <ul class="about-list">
+          <li><i class="fa-solid fa-check"></i> Large choix de livres neufs et d'occasion</li>
+          <li><i class="fa-solid fa-check"></i> Livraison rapide et suivie</li>
+          <li><i class="fa-solid fa-check"></i> Paiement sécurisé</li>
+          <li><i class="fa-solid fa-check"></i> Support client 7j/7</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer" id="contact">
+    <div class="container footer-grid">
+      <div class="footer-col">
+        <div class="logo">
+          <i class="fa-solid fa-book-open"></i>
+          <span>Book<span class="accent">Store</span></span>
+        </div>
+        <p>Votre destination pour tous vos livres préférés, livrés rapidement chez vous.</p>
+        <div class="socials">
+          <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="#"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#"><i class="fa-brands fa-twitter"></i></a>
+          <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h4>Navigation</h4>
+        <a href="#home">Accueil</a>
+        <a href="#books">Livres</a>
+        <a href="#categories">Catégories</a>
+        <a href="#about">À propos</a>
+      </div>
+
+      <div class="footer-col">
+        <h4>Service client</h4>
+        <a href="#">Livraison</a>
+        <a href="#">Retours</a>
+        <a href="#">FAQ</a>
+        <a href="#">Contact</a>
+      </div>
+
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <p><i class="fa-solid fa-location-dot"></i> Oujda, Maroc</p>
+        <p><i class="fa-solid fa-phone"></i> +212 600 000 000</p>
+        <p><i class="fa-solid fa-envelope"></i> contact@bookstore.ma</p>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; 2026 BookStore. Tous droits réservés. — Projet de fin d'études Kubernetes.</p>
+    </div>
+  </footer>
+
+  <div id="toast-container"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
